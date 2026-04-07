@@ -69,6 +69,7 @@ keywords:
 ## 后端说明
 
 本 Skill 通过 POST 请求调用 MCP Server 获取数据。MCP Server 遵循 Streamable HTTP 协议。
+调用 POST 时，除 `Content-Type: application/json` 外，还需发送 `Accept: application/json, text/event-stream`；响应为 SSE，需要从 `data:` 行解析 JSON 并读取 `.result`。
 
 ## MCP 工具定义
 
