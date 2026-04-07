@@ -52,6 +52,16 @@
 
 其他支持 Streamable HTTP 传输的 MCP 客户端同理，只需配置端点 URL。
 
+或者执行命令，例如：
+```
+claude mcp add --transport http jinguyuan-dumpling-skill https://mcp-4g9gkps4c04addd0.service.tcloudbase.com/jgy-mcp --header "Accept: application/json, text/event-stream"
+```
+或
+```
+kimi mcp add --transport http jinguyuan-dumpling-skill https://mcp-4g9gkps4c04addd0.service.tcloudbase.com/jgy-mcp --header "Accept: application/json, text/event-stream"
+```
+等。
+
 ## 发布平台
 
 - GitHub：https://github.com/JinGuYuan/jinguyuan-dumpling-skill
