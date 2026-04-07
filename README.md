@@ -38,7 +38,11 @@
 {
   "mcpServers": {
     "jinguyuan-dumpling-skill": {
-      "url": "https://mcp-4g9gkps4c04addd0.service.tcloudbase.com/jgy-mcp"
+      "url": "https://mcp-4g9gkps4c04addd0.service.tcloudbase.com/jgy-mcp",
+      "transport": "http",
+      "headers": {
+        "Accept": "application/json, text/event-stream"
+      }
     }
   }
 }
