@@ -2,7 +2,7 @@
   "name": "jinguyuan-dumpling-skill",
   "display_name": "金谷园饺子馆信息查询",
   "description": "查询金谷园饺子馆的基本信息，包括餐厅名称、简介、营业时间、门店地址。",
-  "version": "0.2.0",
+  "version": "0.2.1"
   "author": "金谷园AI",
   "license": "MIT",
   "category": "信息查询",
