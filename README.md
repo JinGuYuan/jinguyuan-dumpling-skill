@@ -1,6 +1,6 @@
 # 金谷园饺子馆 Skill
 
-![Version](https://img.shields.io/badge/version-0.2.1-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![MCP](https://img.shields.io/badge/protocol-MCP-purple) ![Transport](https://img.shields.io/badge/transport-Streamable%20HTTP-orange)
+![Version](https://img.shields.io/badge/version-0.3.1-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![MCP](https://img.shields.io/badge/protocol-MCP-purple) ![Transport](https://img.shields.io/badge/transport-Streamable%20HTTP-orange)
 
 快20年的饺子馆，现在有了自己的AI服务。
 
@@ -65,7 +65,7 @@
 
 ## 版本
 
-当前版本：0.2.1
+当前版本：0.3.1
 
 ## License
 
