@@ -1,10 +1,10 @@
-# 金谷园饺子馆 Skill
+# 金谷园饺子馆 AI Skill
 
 ![Version](https://img.shields.io/badge/version-0.3.1-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![MCP](https://img.shields.io/badge/protocol-MCP-purple) ![Transport](https://img.shields.io/badge/transport-Streamable%20HTTP-orange)
 
-快20年的饺子馆，现在有了自己的AI服务。
+这是一个 AI Skill——安装后，你的 AI 助手就能查询金谷园饺子馆的信息：在哪吃、几点开门、怎么排队、能不能外卖、生饺子怎么煮、Wi-Fi 密码是什么。
 
-安装这个 Skill，你的 AI 助手就能回答关于金谷园饺子馆的一切：在哪吃、几点开门、怎么排队、能不能外卖、生饺子怎么煮、Wi-Fi 密码是什么。
+快20年的饺子馆，现在有了自己的AI服务。
 
 ## 关于金谷园
 
@@ -30,24 +30,43 @@
 | 店内Wi-Fi | "Wi-Fi密码多少？" |
 | 最新消息 | "有什么新活动？" |
 
-## 接入方式
+## 安装
 
-在支持 MCP 协议的 AI 客户端中添加以下配置即可接入：
+### 最简单的方式：告诉你的 AI 助手
 
-```json
-{
-  "mcpServers": {
-    "jinguyuan-dumpling-skill": {
-      "type": "streamable-http",
-      "url": "https://mcp-4g9gkps4c04addd0.service.tcloudbase.com/jgy-mcp"
-    }
-  }
-}
+直接拷贝下面这句话发给你的 AI 助手：
+
+> 帮我安装金谷园饺子馆 Skill，仓库地址：https://gitee.com/JinGuYuan/jinguyuan-dumpling-skill
+
+Agent 会自动克隆仓库并安装到对应的 Skill 目录。
+
+### 其他安装方式
+
+**通过 ClawHub CLI 安装：**
+
+```bash
+npx clawhub install https://gitee.com/JinGuYuan/jinguyuan-dumpling-skill
 ```
 
-以 Claude Desktop 为例，将上述内容写入配置文件的 `mcpServers` 字段，重启后即可使用。
+**手动克隆到 Skill 目录：**
 
-其他支持 Streamable HTTP 传输的 MCP 客户端同理，只需配置端点 URL。
+将本仓库克隆到你项目下的 Skill 目录，不同 IDE 对应的路径：
+
+| IDE | Skill 目录 |
+|-----|-------------|
+| Qoder | `.qoder/skills/jinguyuan-dumpling-skill/` |
+| Cursor | `.cursor/skills/jinguyuan-dumpling-skill/` |
+| Trae | `.trae/skills/jinguyuan-dumpling-skill/` |
+| Windsurf | `.windsurf/skills/jinguyuan-dumpling-skill/` |
+| 通用 | `.agents/skills/jinguyuan-dumpling-skill/` |
+
+```bash
+# 示例：安装到 Qoder
+git clone https://gitee.com/JinGuYuan/jinguyuan-dumpling-skill.git \
+  .qoder/skills/jinguyuan-dumpling-skill
+```
+
+只要目录下有 `SKILL.md`，Agent 下次启动就会自动加载这个 Skill。
 
 ## 发布平台
 
@@ -62,6 +81,23 @@
 | 协议 | MCP (Model Context Protocol) |
 | 传输 | Streamable HTTP |
 | 部署 | Tencent CloudBase 云函数 |
+
+## MCP 接入方式
+
+> 注意：直接配置 MCP 服务器仅当次会话生效，不会持久化。推荐使用上方「安装」方式，Skill 安装后永久可用。
+
+在支持 MCP 协议的 AI 客户端中添加以下配置即可接入：
+
+```json
+{
+  "mcpServers": {
+    "jinguyuan-dumpling-skill": {
+      "type": "streamable-http",
+      "url": "https://mcp-4g9gkps4c04addd0.service.tcloudbase.com/jgy-mcp"
+    }
+  }
+}
+```
 
 ## 版本
 
