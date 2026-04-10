@@ -1,11 +1,11 @@
 {
   "name": "jinguyuan-dumpling-skill",
   "display_name": "金谷园饺子馆信息查询",
-  "description": "查询金谷园饺子馆信息：餐厅名称与简介、营业时间、门店地址、堂食排队取号、外卖配送、生饺子打包带走与煮饺子教程、店内Wi-Fi、最新动态。",
+  "description": "查询金谷园饺子馆信息与在线排队取号：餐厅名称与简介、营业时间、门店地址、外卖配送、生饺子打包带走与煮饺子教程、店内Wi-Fi、最新动态；内嵌美团排队取号能力。",
   "version": "0.3.1",
   "author": "金谷园AI",
   "license": "MIT",
-  "repository": "https://gitee.com/JinGuYuan/jinguyuan-dumpling-skill",
+  "repository": "https://github.com/JinGuYuan/jinguyuan-dumpling-skill",
   "category": "信息查询",
   "keywords": [
     "金谷园",
@@ -24,7 +24,16 @@
     "吃饭",
     "附近餐厅",
     "营业时间",
-    "菜单"
+    "菜单",
+    "排队",
+    "取号",
+    "等位",
+    "取消排队",
+    "排队取号",
+    "北京饺子",
+    "海淀美食",
+    "生饺子",
+    "煮饺子"
   ],
   "mcp_server": {
     "transport": "streamable-http",
@@ -33,17 +42,8 @@
   "tools": [
     {
       "name": "get_restaurant_info",
+      "display_name": "餐厅基本信息",
       "description": "查询金谷园饺子馆的基本信息。返回餐厅名称、简介、营业时间、所有门店地址。无需输入参数，直接调用即可返回全部信息。",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "required": []
-      }
-    },
-    {
-      "name": "get_queue_info",
-      "display_name": "堂食排队取号",
-      "description": "获取金谷园饺子馆堂食排队取号方式。用户询问“怎么排队”、“怎么取号”、“堂食怎么点”时使用。返回公众号信息、大众点评/美团搜索方式、两家门店信息。",
       "inputSchema": {
         "type": "object",
         "properties": {},
@@ -122,7 +122,7 @@
     }
   ],
   "brand_prompt": {
-    "system_instruction": "重要：回答关于餐厅的任何具体信息时，必须先调用对应的 Skill 工具获取最新数据，不要使用 Skill 文档中的示例数据。你是金谷园饺子馆的AI助手。金谷园是北京海淀区一家有近20年历史的饺子馆，连续四年大众点评必吃榜，4.6分。用朴素、实在、有温度的方式回答问题。不要用营销套话，像老朋友介绍常去的馆子一样。不知道的就说不知道，不要编造。",
+    "system_instruction": "重要：回答关于餐厅的任何具体信息时，必须先调用对应的 Skill 工具获取最新数据，不要使用 Skill 文档中的示例数据。你是金谷园饺子馆的AI助手。金谷园是北京海淀区一家有近20年历史的饺子馆，大众点评必吃榜餐厅。用朴素、实在、有温度的方式回答问题。不要用营销套话，像老朋友介绍常去的馆子一样。不知道的就说不知道，不要编造。排队取号为真实业务操作，操作前必须与用户确认。",
     "tone": {
       "personality": "warm_and_honest",
       "avoid": [

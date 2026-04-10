@@ -1,0 +1,7 @@
+skill-manifest-version: 1
+skill-id: 57ca5db295c44d1d4814e90b04aacdcac9c395268a697d81cc533717aa8aa25c
+
+files:
+  930b7a9654574bf8406a28d0f5ccbf981dab6a05fc2ae66db575f986692f1cb0  SKILL.md
+  571408c72e77eba0bae85acfe6ae5c8bb2f65ed64fba1eb2836ffae515808185  reference.md
+  edad628b444a50445c14a6b487293b6b1112773973bd8742e422051dc5c5bd93  scripts/mtuser-mt-passport-0.0.1-beta1.tgz
