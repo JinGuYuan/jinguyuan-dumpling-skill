@@ -43,7 +43,7 @@ keywords:
 >
 > Request（端点以 `skill.json` 中 `mcp_server.url` 为准）：
 > 
-```json
+>```json
 > POST <mcp_server.url>
 > Content-Type: application/json
 >
@@ -56,9 +56,9 @@ keywords:
 >     "arguments": {}
 >   }
 > }
-```
+>```
 > Response:
-```json
+>```json
 > {
 >   "jsonrpc": "2.0",
 >   "id": 1,
@@ -71,7 +71,7 @@ keywords:
 >     ]
 >   }
 > }
-```
+>```
 >
 > 其他工具调用方式相同，只需替换 `params.name` 为对应工具名（如 `get_delivery_info`、`get_raw_dumpling_info` 等）。
 > 优先级：MCP 实时数据 > 本文档静态数据 > 告知用户稍后重试。
