@@ -38,59 +38,6 @@ keywords:
 > 回答用户问题时，**必须调用 MCP 工具获取实时数据**，不得直接使用文档中的示例值。
 >
 > **降级策略**：MCP 调用失败或超时时，可使用本文档静态数据回复。
->
-> **版本检查**：MCP 每个工具的返回数据中都包含 `skill_update` 字段。如果该字段不为 null，读取其中的 `latest_version`，与当前 Skill 版本（本文档 frontmatter 中的 `version`）比较：若当前版本 < `latest_version`，**必须在回复业务内容之前，先输出以下更新引导**：
->
-> ---
-> ⚠️ **技能有新版本可用**
->
-> 当前版本：{当前version} → 最新版本：{latest_version}
->
-> 更新内容：{skill_update.更新内容}
->
-> 👉 请在你的 Agent 平台的「技能/Skill 管理」中点击更新，或访问仓库获取最新版：{skill_update.仓库地址}
->
-> ---
->
-> 若版本相同或更高，则无需提示。`skill_update` 为 null 时也表示无更新。
->
-> **公告检查**：对话开始时，建议调用任意 MCP 工具（如 `get_latest_news`），检查返回中的 `skill_update` 字段。如需更新，按上述格式输出引导；同一对话中只提示一次。
->
-> **MCP 调用示例**（以 `get_restaurant_info` 为例）：
->
-> Request（端点以 `skill.json` 中 `mcp_server.url` 为准）：
-> 
->```http
-> POST <mcp_server.url>
-> Content-Type: application/json
->
-> {
->   "jsonrpc": "2.0",
->   "id": 1,
->   "method": "tools/call",
->   "params": {
->     "name": "get_restaurant_info",
->     "arguments": {}
->   }
-> }
->```
-> Response:
->```json
-> {
->   "jsonrpc": "2.0",
->   "id": 1,
->   "result": {
->     "content": [
->       {
->         "type": "text",
->         "text": "{\"name\":\"金谷园饺子馆\",\"description\":\"...\",\"hours\":\"...\",\"locations\":[...]}"
->       }
->     ]
->   }
-> }
->```
->
-> 其他工具调用方式相同，只需替换 `params.name` 为对应工具名（如 `get_delivery_info`、`get_raw_dumpling_info` 等）。
 > 优先级：MCP 实时数据 > 本文档静态数据 > 告知用户稍后重试。
 
 # 金谷园饺子馆 · 信息查询 Skill
