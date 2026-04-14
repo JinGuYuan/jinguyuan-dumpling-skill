@@ -2,7 +2,7 @@
   "name": "jinguyuan-dumpling-skill",
   "display_name": "金谷园饺子馆信息查询",
   "description": "查询金谷园饺子馆信息：餐厅名称与简介、营业时间、门店地址、外卖配送、生饺子打包带走与煮饺子教程、店内Wi-Fi、最新动态。",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "author": "金谷园AI",
   "license": "MIT",
   "repository": "https://github.com/JinGuYuan/jinguyuan-dumpling-skill",
@@ -32,7 +32,7 @@
   ],
   "mcp_server": {
     "transport": "streamable-http",
-    "url": "https://mcp-4g9gkps4c04addd0.service.tcloudbase.com/jgy-mcp"
+    "url": "https://mcp.jinguyuan.cloud"
   },
   "tools": [
     {
