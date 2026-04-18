@@ -8,7 +8,7 @@
 
 ## 关于金谷园
 
-北邮旁边的饺子馆。官网：[jinguyuan.cloud](https://jinguyuan.cloud)
+北邮旁边的饺子馆。官网：[jinguyuan.cloud](https://jinguyuan.cloud) · [AI 元数据 (llms.txt)](https://jinguyuan.cloud/llms.txt)
 
 | 项目 | 内容 |
 |------|------|
@@ -119,9 +119,9 @@ git clone https://gitee.com/JinGuYuan/jinguyuan-dumpling-skill.git \
 
 ## 版本
 
-当前版本：0.4.0
+当前版本：0.4.2
 
-> 说明：本 Skill 版本（0.3.4）与内嵌排队组件（meituan-queue）版本独立演进，互不影响。
+> 说明：本 Skill 版本与内嵌排队组件（meituan-queue）版本独立演进，互不影响。
 
 ## License
 
