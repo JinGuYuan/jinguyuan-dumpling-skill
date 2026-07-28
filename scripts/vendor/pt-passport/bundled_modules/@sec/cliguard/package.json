@@ -1,0 +1,27 @@
+{
+  "name": "@sec/cliguard",
+  "version": "1.3.0",
+  "description": "Minimal local adapter for the vendored Meituan request-signing core",
+  "files": [
+    "index.js",
+    "core/",
+    "readme.md"
+  ],
+  "main": "index.js",
+  "keywords": [
+    "cliguard",
+    "openclaw",
+    "skill",
+    "security",
+    "fingerprint",
+    "fetch-signature",
+    "signature",
+    "mtgsig"
+  ],
+  "author": "CLIGuard",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {}
+}
