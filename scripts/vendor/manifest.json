@@ -1,0 +1,22 @@
+{
+  "ptPassport": {
+    "name": "@mtuser/pt-passport",
+    "version": "0.1.4",
+    "source": "upstream/meituan-queue@V2",
+    "sourceArchiveSha256": "e405f9f7ff234c7d09f111a53fd5cb6a369ba402e5d0d338fd4fdd93dfd5cf48",
+    "cliguard": {
+      "version": "1.3.0",
+      "integration": "minimal-local-adapter",
+      "adapterSha256": "2c8a09c6858e4ac50d41d2fdc535afe02dde273e68ab5346717a2dc41622bf4b",
+      "signingCoreSha256": "988c1cd008dab41afe4848c8a30bba589572bc72ce4c8696fca16faca0a74df2",
+      "retained": ["fetch request signing", "required common parameters", "signing-core"],
+      "removed": ["background daemon", "dynamic updater", "http/https monkey patches"]
+    }
+  },
+  "qrcode": {
+    "name": "qrcode",
+    "version": "1.5.4",
+    "source": "npm:qrcode@1.5.4",
+    "lockfile": "qrcode-package-lock.json"
+  }
+}
